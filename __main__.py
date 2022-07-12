@@ -158,15 +158,6 @@ ami = aws.ec2.get_ami(
 
 keypair = aws.ec2.KeyPair("cocus", public_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCfH1V1EBPy8sipkTdmDTX3YbWb/x7z3uiUvRLLnEyQOhlx8OVxdAw95h0ZP+gXWWJEjFBsPazyS7yE2PkaxyxWOgr6HIBdzSLG8ToSptxKByKI+veZyARyX9qXO4olOjORoEilVFtU4Og+D70cllX8jjcBN2UCexwXGrO8ZmaVhukmAjSbbi97UbTTdO9Km9iUGrFP687ikSWD8PoXPEHox0Xf6fGircKaOQSvnOcLT0os6HVDKdZTdNNJwsUS9ZnD7hz+yI9Q/bKRu/aimeDlEtGvwFpVvhgxyxZx3Xp+9CRmDHK2XFcKB3FvtdPhcX7LUeq420YY+bi9qr4crxU/kDx33rVc2qSa+1MDUzYeotx8ursolz1LkYWssjlV6DtJBl3FSjdTR8646VJdvP3xIjehFy6VjNSO5C7j+J/dKw0zqyFliCcWgzl3SE6Ke6CYLpZlWb5i6BDalDK+uixrtvw/5/DwbmgybyCnwOPJ87XLf5DrldwCUiwP8yIXSH8= root@cloudsim")
 
-
-user_user = aws.iam.User("userUser", path="/")
-user_ssh_key = aws.iam.SshKey("userSshKey",
-    username=user_user.name,
-    encoding="SSH",
-    public_key="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCfH1V1EBPy8sipkTdmDTX3YbWb/x7z3uiUvRLLnEyQOhlx8OVxdAw95h0ZP+gXWWJEjFBsPazyS7yE2PkaxyxWOgr6HIBdzSLG8ToSptxKByKI+veZyARyX9qXO4olOjORoEilVFtU4Og+D70cllX8jjcBN2UCexwXGrO8ZmaVhukmAjSbbi97UbTTdO9Km9iUGrFP687ikSWD8PoXPEHox0Xf6fGircKaOQSvnOcLT0os6HVDKdZTdNNJwsUS9ZnD7hz+yI9Q/bKRu/aimeDlEtGvwFpVvhgxyxZx3Xp+9CRmDHK2XFcKB3FvtdPhcX7LUeq420YY+bi9qr4crxU/kDx33rVc2qSa+1MDUzYeotx8ursolz1LkYWssjlV6DtJBl3FSjdTR8646VJdvP3xIjehFy6VjNSO5C7j+J/dKw0zqyFliCcWgzl3SE6Ke6CYLpZlWb5i6BDalDK+uixrtvw/5/DwbmgybyCnwOPJ87XLf5DrldwCUiwP8yIXSH8= root@cloudsim")
-
-
-
 user_data = """
 #!/bin/bash
 echo "Hello, world!" > index.html
