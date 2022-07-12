@@ -1,0 +1,6 @@
+name: cocus
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: challenger
